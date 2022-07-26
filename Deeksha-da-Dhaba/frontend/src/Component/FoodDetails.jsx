@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export const FoodDetails = () => {
   const { id } = useParams();
@@ -123,9 +123,11 @@ export const FoodDetails = () => {
                           />
                         </div>
 
-                        <button class="block px-5 py-3 ml-3 text-xs font-medium text-white bg-green-600 rounded hover:bg-green-500">
-                          Add to Cart
-                        </button>
+                        <Link to="/checkout">
+                          <button class="block px-5 py-3 ml-3 text-xs font-medium text-white bg-green-600 rounded hover:bg-green-500">
+                            Payment
+                          </button>
+                        </Link>
                       </div>
                     </div>
                   </div>
